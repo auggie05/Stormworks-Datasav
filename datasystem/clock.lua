@@ -29,6 +29,12 @@ end
 function time(clock)
     return hour(clock)+(minute(clock)/100)
 end 
+function pm(clock)
+    if clock >= .5
+    then return true
+    else return false
+    end
+end
 
 function sevendd(number, place)
     return m.fmod(m.floor(number/place),10)
@@ -43,4 +49,5 @@ function onTick()
     osn(4,sevendd(hour(c),10))
     osn(5,sevendd(hour12(c),1))
     osn(6,sevendd(hour12(c),10))
+    osb(1,pm(c))
 end

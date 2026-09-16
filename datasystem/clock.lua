@@ -8,15 +8,18 @@ igb=i.getBool
 osn=o.setNumber
 osb=o.setBool
 
---clock * 24 hour.decimal minute
---floor clock * 24 hour
---floor(((clock24)-floor (clock24)) * 60) minute
 function hour(clock)
     return m.floor(clock*24)
 end
 
 function hour12(clock)
-    return m.abs(m.floor(clock*24)-12)
+    if hour(clock)==0 
+    then 
+        return 12
+    elseif hour(clock)>12
+        then return m.abs(m.floor(clock*24)-12)
+        else return hour(clock)
+    end
 end
 
 function minute(clock)
@@ -38,4 +41,6 @@ function onTick()
     osn(2,sevendd(minute(c),10))
     osn(3,sevendd(hour(c),1))
     osn(4,sevendd(hour(c),10))
+    osn(5,sevendd(hour12(c),1))
+    osn(6,sevendd(hour12(c),10))
 end

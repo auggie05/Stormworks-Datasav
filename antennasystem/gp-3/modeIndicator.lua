@@ -10,16 +10,15 @@ osb=output.setBool
 function onTick()
     --isOn
     if igb(1) == true
-    then 
-        osb(4,true) 
+    then
+        osb(4,true)
         osb(8,true)
         osb(6,false)
         osb(10,false)
-        
     else 
         osb(6,true)
         osb(10,true)
-        osb(4,false) 
+        osb(4,false)
         osb(8,false)
     end
     --isCrypto
@@ -32,12 +31,15 @@ function onTick()
         osb(11,false)
     end
     --isMute, noFrequency, noClock
-    if igb(3) == true or ign(1) == 0 or ign(3) == 0
+    if igb(1)==true
     then
-        osb(5,true)
-        osb(9,true)
-    else
-        osb(5,false)
-        osb(9,false)
+        if igb(3) == true or ign(1) == 0 or ign(3) == 0
+        then
+            osb(5,true)
+            osb(9,true)
+        else
+            osb(5,false)
+            osb(9,false)
+        end
     end
 end

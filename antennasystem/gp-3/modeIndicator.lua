@@ -30,10 +30,10 @@ function onTick()
         osb(7,false)
         osb(11,false)
     end
-    --isMute, noFrequency, noClock
+    --isMute, noFrequency, noClock, noCipherIfCrypto
     if igb(1)==true
     then
-        if igb(3) == true or ign(1) == 0 or ign(3) == 0
+        if igb(3) == true or ign(1) == 0 or ign(3) == 0 or (ign(2) == 0 and igb(2) == true)
         then
             osb(5,true)
             osb(9,true)

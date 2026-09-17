@@ -1,8 +1,15 @@
---Basic Inputs and Outputs
-ign=input.getNumber
-igb=input.getBool
-osn=output.setNumber
-osb=output.setBool
+--Starter
+i,o,p=input,output,property
+m=math
+s=screen
+--I/Os
+ign=i.getNumber
+igb=i.getBool
+osn=o.setNumber
+osb=o.setBool
+pgn=p.getNumber
+pgb=p.getBool
+pgt=p.getText
 
 --Returns true if there is a touch input within set paramaters.
 function touchWithin (x,y,rectX,rectY,rectW,rectH)

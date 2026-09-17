@@ -18,28 +18,41 @@ The prefix ANSY shall be used when identifying a radio system.
 ## First Identifier
 The first identifier shall show the type of data being transmitted or received.
 A - Audio
+
 D - Data Composite
+
 K - Combined audio, composite, or video
+
 V - Video
 ## Second Identifier
 The second identifier shall show the type of equipment.
 ### A - Audio
 E - Encrypted Radio
+
 R - Radio (One frequency)
+
 T - Radio Telephone (Two frequencies, telephone protocol needed)
 ### D - Data Composite
 E - Encrypted Radio
+
 G - General Data
+
 N - Navigation
+
 R - Remote Control
+
 T - Targeting
 ### K - Combined audio, composite, or video
 A - Automated Air Traffic Control
+
 E - Encrypted Radio
+
 T - Television
 ### V - Video
 G - General Video Share
+
 R - Video used for Remote Control
+
 T - Television
 
 ***
